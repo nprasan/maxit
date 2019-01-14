@@ -184,7 +184,7 @@ function endGame(){
 	
 	$('#game').css('opacity', 0.3);
 	
-	$('button[id^="grid"]').click(function() { });
+	$('button[id^="grid"]').off();
 
 }
 
