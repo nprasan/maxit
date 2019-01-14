@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaxIt !</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/fontawesome.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h1 class="text-center">MaxIt</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-6 col-sm-4 col-md-4 col-lg-3 offset-sm-2 offset-md-2 offset-lg-3 text-center">
+			<h3 style="color:rgb(255,0,0);">Player 1</h3>
+			<h4 id="score1">0</h4>
+		</div>
+		<div class="col-6 col-sm-4 col-md-4 col-lg-3 text-center">
+			<h3 style="color:rgb(0,170,0);">Player 2</h3>
+			<h4 id="score2">0</h4>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col text-center" style="padding-bottom:10px">
+		<button class="btn btn-primary" style="width:auto; height:auto; font-size:24px;" type="button" id="reset" onclick="initializeGame()">Restart Game</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<div class="alert alert-success text-center" role="alert" id="status">
+				<span><strong>Current Turn : &nbsp<span id="player"><i class='fas fa-user'></i> Player 1</span></strong><br></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container" id="game" style="max-width:360px;"> <div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr>
+			<td><button class="btn btn-primary" type="button" id="grid11">11</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid12">12</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid13">13</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid14">14</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid15">15</button></td>
+		</tr>
+		<tr>
+			<td><button class="btn btn-primary" type="button" id="grid21">21</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid22">22</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid23">23</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid24">24</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid25">25</button></td>
+		</tr>
+		<tr>
+			<td><button class="btn btn-primary" type="button" id="grid31">31</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid32">32</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid33">33</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid34">34</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid35">35</button></td>
+		</tr>
+		<tr>
+			<td><button class="btn btn-primary" type="button" id="grid41">41</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid42">42</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid43">43</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid44">44</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid45">45</button></td>
+		</tr>
+		<tr>
+			<td><button class="btn btn-primary" type="button" id="grid51">51</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid52">52</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid53">53</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid54">54</button></td>
+			<td><button class="btn btn-primary" type="button" id="grid55">55</button></td>
+		</tr>
+	</tbody>
+</table>
+</div> </div>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<p><strong>Instructions:</strong></p>
+			<ul>
+				<li>This is a two player game. Players alternate turns.</li>
+				<li>Each player has 5 turns to add to their score.</li>
+				<li>Players can move to adjacent, unoccupied squares to gain points.</li>
+				<li>The player with the maximum points at the end of 5 turns will win.</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="error" class="overlay" onclick="closeError()">
+	<span class="closebtn" onclick="closeError()">&times;</span>
+	<div class="overlay-content">
+		<p>You can only move to adjacent, unoccupied positions !</p>    
+	</div>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="game.js"></script>
+    
+</body>
+</html>
